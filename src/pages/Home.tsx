@@ -5,9 +5,9 @@ import './home.css'
 const SITE_TITLE = 'The Tang Dynasty'
 const SITE_BYLINE = 'By: Samuel and Jeremy'
 
-/** Google Docs video — use /preview for iframe embedding */
-const IMPACT_VIDEO_EMBED_SRC =
-  'https://docs.google.com/videos/d/1cRr0iOpqw9g25AifdNRKMxNZZaqVdvOpLFm8YlLB29k/preview'
+/** Google blocks third-party iframes for many Docs/Drive videos — open in new tab instead */
+const IMPACT_VIDEO_URL =
+  'https://docs.google.com/videos/d/1cRr0iOpqw9g25AifdNRKMxNZZaqVdvOpLFm8YlLB29k/edit?usp=sharing'
 
 const NAV: { id: string; label: string }[] = [
   { id: 'background', label: 'Background' },
@@ -165,15 +165,22 @@ export function Home() {
           <p className="ct-home__section-text">
             {`The Tang Dynasty was a "golden age" that profoundly influenced East Asia through its cosmopolitan culture, advanced administration, and artistic achievements. It established a model of centralized government, Buddhism, and Confucianism, which Korea, Japan, and Vietnam adopted. The capital, Chang'an, was a major international trade hub.`}
           </p>
-          <div className="ct-home__embed">
-            <iframe
-              title="Project video"
-              src={IMPACT_VIDEO_EMBED_SRC}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
+          <a
+            className="ct-home__video-link"
+            href={IMPACT_VIDEO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="ct-home__video-link-play" aria-hidden>
+              ▶
+            </span>
+            <span className="ct-home__video-link-text">
+              <span className="ct-home__video-link-title">Watch project video</span>
+              <span className="ct-home__video-link-hint">
+                Opens in Google — embedding is blocked on other sites
+              </span>
+            </span>
+          </a>
         </article>
       </main>
 
