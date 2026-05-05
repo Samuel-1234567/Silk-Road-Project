@@ -5,6 +5,10 @@ import './home.css'
 const SITE_TITLE = 'The Tang Dynasty'
 const SITE_BYLINE = 'By: Samuel and Jeremy'
 
+/** Google Docs video — use /preview for iframe embedding */
+const IMPACT_VIDEO_EMBED_SRC =
+  'https://docs.google.com/videos/d/1cRr0iOpqw9g25AifdNRKMxNZZaqVdvOpLFm8YlLB29k/preview'
+
 const NAV: { id: string; label: string }[] = [
   { id: 'background', label: 'Background' },
   { id: 'thesis', label: 'Thesis' },
@@ -161,6 +165,15 @@ export function Home() {
           <p className="ct-home__section-text">
             {`The Tang Dynasty was a "golden age" that profoundly influenced East Asia through its cosmopolitan culture, advanced administration, and artistic achievements. It established a model of centralized government, Buddhism, and Confucianism, which Korea, Japan, and Vietnam adopted. The capital, Chang'an, was a major international trade hub.`}
           </p>
+          <div className="ct-home__embed">
+            <iframe
+              title="Project video"
+              src={IMPACT_VIDEO_EMBED_SRC}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </article>
       </main>
 
