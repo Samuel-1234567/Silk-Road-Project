@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import './home.css'
 
 const SITE_TITLE = 'The Tang Dynasty'
-const SITE_BYLINE = 'By: Samuel (Jeremy didnt really do anything)'
+const SITE_BYLINE = 'By: Samuel and Jeremy'
 
 const NAV: { id: string; label: string }[] = [
   { id: 'background', label: 'Background' },
