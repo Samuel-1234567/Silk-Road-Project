@@ -151,6 +151,23 @@
   margin-top: 1em;
 }
 
+.ct-home__citations {
+  margin: 0;
+  padding-left: 1.35em;
+  max-width: 70ch;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.ct-home__citations li {
+  padding-left: 0.35em;
+}
+
+.ct-home__citations li + li {
+  margin-top: 0.85em;
+}
+
 .ct-home__section-figure {
   margin: 1.25em 0 0;
   max-width: 100%;

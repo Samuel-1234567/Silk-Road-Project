@@ -14,6 +14,7 @@ const NAV: { id: string; label: string }[] = [
   { id: 'thesis', label: 'Thesis' },
   { id: 'heart-of-the-story', label: 'Heart of the story' },
   { id: 'the-impact-today', label: 'The impact today' },
+  { id: 'citations', label: 'Citations' },
 ]
 
 function ScrollToHash() {
@@ -181,6 +182,21 @@ export function Home() {
               </span>
             </span>
           </a>
+        </article>
+
+        <article id="citations" className="ct-home__card ct-home__section">
+          <h2 className="ct-home__section-title">Citations</h2>
+          <ol className="ct-home__citations">
+            <li>
+              {`Silk Road. 2026. BrainPOP, www.brainpop.com/topic/silk-road/movie/. Accessed 27 Apr. 2026.`}
+            </li>
+            <li>
+              {`Davis, Paul K. "Tang Dynasty." World History: Ancient and Medieval Eras, ABC-CLIO, 2026, ancienthistory.abc-clio.com/Search/Display/602499. Accessed 27 Apr. 2026.`}
+            </li>
+            <li>
+              {`Britannica Editors. "Tang dynasty". Encyclopedia Britannica, 6 Apr. 2026, https://www.britannica.com/topic/Tang-dynasty. Accessed 4 May 2026.`}
+            </li>
+          </ol>
         </article>
       </main>
 
